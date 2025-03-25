@@ -90,16 +90,32 @@ int main(void){
     end = chrono::high_resolution_clock::now();
     chrono::duration<double> binTime = end - start;
 
+    //Measure and perform binary search
+    int binIterations;
+    start = chrono::high_resolution_clock::now();
+    int binResult = binarySearch(sortedArray, ARRAY_SIZE, searchKey, binIterations);
+    end = chrono::high_resolution_clock::now();
+    chrono::duration<double> sortTime = end - start;
+
     //output the results
     cout << "Linear Search: " <<endl;
     cout << " Result: " << linResult <<endl;
     cout <<" Time: " << linTime.count() <<" seconds " <<endl;
+    cout <<" Iterations: " << linIterations <<endl <<endl;
 
-    // lin big O n 
-    // selection big 0 n2
 
-    // binarysearch 
+    cout << "Selection Sort: " <<endl;
+    cout << " Time: " << sortTime.count() << " seconds " <<endl;
+    cout << " Iterations: " << sortIterations <<endl <<endl;
 
+    cout << "Binary Search: " <<endl;
+    cout << " Result: " << binResult <<endl;
+    cout << " Time: " << binTime.count() << " seconds " <<endl;
+    cout << " Iterations: " << binIterations <<endl <<endl;
+
+    // lin O (n) 
+    // selection 0 (n2)
+    // binarysearch (n2)
 
     return 0;
 }
