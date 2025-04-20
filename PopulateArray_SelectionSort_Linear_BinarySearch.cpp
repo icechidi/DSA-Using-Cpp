@@ -42,7 +42,7 @@ int selectionSort(int arr[], int size){
     return iterations;
 }
 
-//Binary Search Functions
+//Binary Search Function
 int binarySearch(int arr[], int size, int key, int &iterations){
     int left = 0;
     int right = size -1;
@@ -116,6 +116,7 @@ int main(void){
     // lin O (n) 
     // selection 0 (n2)
     // binarysearch (n2)
+    // Binary function output updated below
 
     return 0;
 }
